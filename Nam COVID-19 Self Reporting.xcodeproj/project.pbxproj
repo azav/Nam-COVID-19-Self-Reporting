@@ -19,7 +19,8 @@
 		4D6442FE243A3AA0002655FD /* UserListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6442FD243A3AA0002655FD /* UserListTableViewController.m */; };
 		4D644301243A3AD7002655FD /* LandingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D644300243A3AD7002655FD /* LandingScreenViewController.m */; };
 		4D644304243A7B77002655FD /* Scripts in Resources */ = {isa = PBXBuildFile; fileRef = 4D644303243A7B77002655FD /* Scripts */; };
-		4D644317243DF9E4002655FD /* Utilities in Resources */ = {isa = PBXBuildFile; fileRef = 4D644316243DF9E4002655FD /* Utilities */; };
+		4D64431D243DFADC002655FD /* GeneralUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D64431B243DFADC002655FD /* GeneralUtils.m */; };
+		4D64431E243DFADC002655FD /* BuildEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D64431C243DFADC002655FD /* BuildEnvironment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +64,10 @@
 		4D6442FF243A3AD7002655FD /* LandingScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandingScreenViewController.h; sourceTree = "<group>"; };
 		4D644300243A3AD7002655FD /* LandingScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LandingScreenViewController.m; sourceTree = "<group>"; };
 		4D644303243A7B77002655FD /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Scripts; path = ../Scripts; sourceTree = "<group>"; };
-		4D644316243DF9E4002655FD /* Utilities */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utilities; sourceTree = "<group>"; };
+		4D644319243DFADC002655FD /* GeneralUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralUtils.h; sourceTree = "<group>"; };
+		4D64431A243DFADC002655FD /* BuildEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildEnvironment.h; sourceTree = "<group>"; };
+		4D64431B243DFADC002655FD /* GeneralUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralUtils.m; sourceTree = "<group>"; };
+		4D64431C243DFADC002655FD /* BuildEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildEnvironment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +133,7 @@
 				4D6442C7243A0E61002655FD /* Main.storyboard */,
 				4D6442CC243A0E62002655FD /* LaunchScreen.storyboard */,
 				4D6442CF243A0E62002655FD /* Info.plist */,
-				4D644316243DF9E4002655FD /* Utilities */,
+				4D644318243DFADC002655FD /* Utilities */,
 				4D6442D0243A0E62002655FD /* main.m */,
 			);
 			path = "Nam COVID-19 Self Reporting";
@@ -151,6 +155,17 @@
 				4D6442E7243A0E62002655FD /* Info.plist */,
 			);
 			path = "Nam COVID-19 Self ReportingUITests";
+			sourceTree = "<group>";
+		};
+		4D644318243DFADC002655FD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4D644319243DFADC002655FD /* GeneralUtils.h */,
+				4D64431A243DFADC002655FD /* BuildEnvironment.h */,
+				4D64431B243DFADC002655FD /* GeneralUtils.m */,
+				4D64431C243DFADC002655FD /* BuildEnvironment.m */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +276,6 @@
 				4D6442CE243A0E62002655FD /* LaunchScreen.storyboard in Resources */,
 				4D6442CB243A0E62002655FD /* Assets.xcassets in Resources */,
 				4D6442C9243A0E61002655FD /* Main.storyboard in Resources */,
-				4D644317243DF9E4002655FD /* Utilities in Resources */,
 				4D644304243A7B77002655FD /* Scripts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,9 +342,11 @@
 			files = (
 				4D6442FB243A392C002655FD /* DataSingleton.m in Sources */,
 				4D6442C0243A0E61002655FD /* AppDelegate.m in Sources */,
+				4D64431E243DFADC002655FD /* BuildEnvironment.m in Sources */,
 				4D6442D1243A0E62002655FD /* main.m in Sources */,
 				4D644301243A3AD7002655FD /* LandingScreenViewController.m in Sources */,
 				4D6442C3243A0E61002655FD /* SceneDelegate.m in Sources */,
+				4D64431D243DFADC002655FD /* GeneralUtils.m in Sources */,
 				4D6442FE243A3AA0002655FD /* UserListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
