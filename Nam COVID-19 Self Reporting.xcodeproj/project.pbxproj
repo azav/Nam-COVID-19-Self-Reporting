@@ -161,8 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				4D644319243DFADC002655FD /* GeneralUtils.h */,
-				4D64431A243DFADC002655FD /* BuildEnvironment.h */,
 				4D64431B243DFADC002655FD /* GeneralUtils.m */,
+				4D64431A243DFADC002655FD /* BuildEnvironment.h */,
 				4D64431C243DFADC002655FD /* BuildEnvironment.m */,
 			);
 			path = Utilities;

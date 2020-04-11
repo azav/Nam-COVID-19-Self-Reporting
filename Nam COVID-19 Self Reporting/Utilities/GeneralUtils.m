@@ -13,6 +13,7 @@
 // It is expected to be called in an about screen
 // For non release builds, it is also called by the first viewController (landing page) after the app launch.
 // The purpose of this is to display to people who are not the client that the app Version and build are what they expect
+// Build Version will fail under the new build system.
 
 + (NSString *)versionAndBuild
 {
@@ -27,6 +28,7 @@
     // Uncomment out any of the lines below if needed or as needed.
     //NSString *appDisplayName = [appInfoDictionary objectForKey:@"CFBundleDisplayName"];
     //NSString *appDisplayName = [appInfoDictionary objectForKey:@"CFBundleExecutable"];
+    // May fail under new build system.
     NSString *version = [appInfoDictionary objectForKey:@"CFBundleShortVersionString"];
     NSNumber *buildNumber = [NSNumber numberWithInteger:[[appInfoDictionary objectForKey:@"CFBundleVersion"] integerValue]];
     //NSString *buildNumberString = [appInfoDictionary objectForKey:@"CFBundleVersion"];
@@ -61,6 +63,7 @@
     NSString *buildNumberString = [appInfoDictionary objectForKey:@"CFBundleVersion"];
     
     // Formatting build number using stringWithFormat
+    // May fail under new build system.
     NSNumber *buildNumber = [NSNumber numberWithInteger:[[appInfoDictionary objectForKey:@"CFBundleVersion"] integerValue]];
     NSString *paddedBuildNumber = [NSString stringWithFormat:@"%05d", [buildNumber intValue]];
     
@@ -76,10 +79,11 @@
     [formatter setMinimumIntegerDigits:5];
     
     NSString *formattedBuildNumber = [formatter stringFromNumber: buildNumber];
-    
+    NSLog(@"%@ ", formattedBuildNumber);
   
     
     nil;
 }
+
 
 @end

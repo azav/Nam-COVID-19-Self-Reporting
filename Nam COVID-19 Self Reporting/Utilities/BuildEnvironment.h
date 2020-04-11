@@ -42,6 +42,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)isNotBuildConfig:(NSString *)buildConfigToCheckFor;
 
 + (NSString *)displayBuildConfig;
+
++ (BOOL)isSimulator;
++ (BOOL)isDevice;
+
 @end
 
 NS_ASSUME_NONNULL_END

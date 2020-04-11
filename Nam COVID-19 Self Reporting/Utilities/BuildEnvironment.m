@@ -134,4 +134,25 @@ static NSString *_buildConfig = nil;
     [buildConfig appendString:buildEnv];
     return buildConfig;
 }
+
+
+// IsSimulator
+// We might want to add this as an extension to isDevice.
++ (BOOL)isSimulator
+{
+    NSDictionary *appInfoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *DTPlatformName = [appInfoDictionary objectForKey:@"DTPlatformName"];
+    BOOL isSimulator = [DTPlatformName containsString:@"simulator"];
+    return isSimulator;
+}
+
++ (BOOL)isDevice
+{
+    NSDictionary *appInfoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *DTPlatformName = [appInfoDictionary objectForKey:@"DTPlatformName"];
+    BOOL isSimulator = ![DTPlatformName containsString:@"simulator"];
+    return isSimulator;
+}
+
+
 @end
