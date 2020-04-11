@@ -313,7 +313,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#\"${SRCROOT}\"/Scripts/Reset Build Number to Placeholder.sh\"\n#\"/Users/zav/Developer/Nam-COVID-19-Self-Reporting/Scripts/Set Build Number Only for Build.sh\"\n\ngit=`sh /etc/profile; which git`\n\ngit_count=`git rev-list  HEAD --count`\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $git_count\" \"${PRODUCT_SETTINGS_PATH}\"\n\necho \"Updated build number in ${PRODUCT_SETTINGS_PATH} to $git_count\"\n\n\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#\"${SRCROOT}\"/Scripts/Reset Build Number to Placeholder.sh\"\n#\"/Users/zav/Developer/Nam-COVID-19-Self-Reporting/Scripts/Set Build Number Only for Build.sh\"\n\n# This may fail in the new build system because Bundle Version isn't copied into the app's info.plist.\ngit=`sh /etc/profile; which git`\n\ngit_count=`git rev-list  HEAD --count`\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $git_count\" \"${PRODUCT_SETTINGS_PATH}\"\n\necho \"Updated build number in ${PRODUCT_SETTINGS_PATH} to $git_count\"\n\n\n";
 		};
 		4D644306243A7C80002655FD /* Reset Build Number to Placeholder */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -331,7 +331,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n# Setting this value back to Placeholder makes it so that the info.plist wasn't dirtied and will not be require another commit\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion 'Placeholder'\" \"${PRODUCT_SETTINGS_PATH}\"\necho \"Restored placeholder value in ${PRODUCT_SETTINGS_PATH}\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n# Setting this value back to Placeholder makes it so that the info.plist wasn't dirtied and will not be require another commit\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion 'Placeholder'\" \"${PRODUCT_SETTINGS_PATH}\"\necho \"Restored placeholder value in ${PRODUCT_SETTINGS_PATH}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
