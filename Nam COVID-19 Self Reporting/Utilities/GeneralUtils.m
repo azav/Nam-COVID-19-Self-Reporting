@@ -25,12 +25,23 @@
     
     NSDictionary *appInfoDictionary = [[NSBundle mainBundle] infoDictionary];
     
+    NSNumber *buildNumber;
+    NSString *buildNumberKey = @"CFBundleVersion";
+    
+    BOOL doesBuildNumberKeyExist = [[GeneralUtils new] keyExistsInInfoDictionary: buildNumberKey];
+    if (! doesBuildNumberKeyExist) {
+        buildNumber = 0;
+        NSLog(@"Error: Build number can not be determined. CFBundleVersion missing from info.plist.");
+    } else {
+         buildNumber = [NSNumber numberWithInteger:[[appInfoDictionary objectForKey:@"CFBundleVersion"] integerValue]];
+    }
+    
     // Uncomment out any of the lines below if needed or as needed.
     //NSString *appDisplayName = [appInfoDictionary objectForKey:@"CFBundleDisplayName"];
     //NSString *appDisplayName = [appInfoDictionary objectForKey:@"CFBundleExecutable"];
     // May fail under new build system.
     NSString *version = [appInfoDictionary objectForKey:@"CFBundleShortVersionString"];
-    NSNumber *buildNumber = [NSNumber numberWithInteger:[[appInfoDictionary objectForKey:@"CFBundleVersion"] integerValue]];
+    
     //NSString *buildNumberString = [appInfoDictionary objectForKey:@"CFBundleVersion"];
     
     // Formatting build number using stringWithFormat
@@ -47,6 +58,8 @@
     
     NSString *versionAndBuild = [NSString stringWithFormat:versionAndBuildNumberFormatString, version, formattedBuildNumber];
     
+
+    
    // [[[GeneralUtils class] alloc] numberFormatting];
     return versionAndBuild;
 }
@@ -61,6 +74,7 @@
 {
     NSDictionary *appInfoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString *buildNumberString = [appInfoDictionary objectForKey:@"CFBundleVersion"];
+    
     
     // Formatting build number using stringWithFormat
     // May fail under new build system.
@@ -85,5 +99,12 @@
     nil;
 }
 
+- (BOOL)keyExistsInInfoDictionary:(NSString *)objectForInfoDictionaryKey
+{
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSArray *infoDictionaryKeys = [infoDictionary allKeys];
+    BOOL keyExistsInDictionary = [infoDictionaryKeys containsObject:objectForInfoDictionaryKey];
+    return keyExistsInDictionary;
+}
 
 @end

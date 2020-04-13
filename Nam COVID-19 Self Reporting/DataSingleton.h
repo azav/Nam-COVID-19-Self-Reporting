@@ -15,6 +15,7 @@
 
 + (instancetype)sharedInstance;
 - (void)createUsers;
+- (void)loadUsers;
 
 
 - (void)breakpoint;

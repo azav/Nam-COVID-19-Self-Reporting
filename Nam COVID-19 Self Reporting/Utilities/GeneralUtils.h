@@ -11,4 +11,6 @@
 
 + (NSString *)versionAndBuild;
 - (void)numberFormatting;
+
+- (BOOL)keyExistsInInfoDictionary:(NSString *)objectForInfoDictionaryKey;
 @end
