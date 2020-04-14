@@ -14,8 +14,15 @@
 @property (nonatomic, strong) NSMutableArray *users;
 
 + (instancetype)sharedInstance;
-- (void)createUsers;
+- (void)initData;
+- (NSMutableDictionary *)createUser;
+- (void)completeUserSetupByPatientID:(NSString *)patientID;
+- (NSDictionary *)userRecordFromPatientID:(NSString *)patientID;
+- (void)addNameForPatientID:(NSString *)patientID firstName:(NSString *)firstName lastName:(NSString *)lastName gender:(NSString *)gender;
+- (void)addFacilityNameForPatientID:(NSString *)patientID facilityName:(NSString *)facilityName;
+- (void)clearUsers;
 - (void)loadUsers;
+- (BOOL)isUserRegistered;
 
 
 - (void)breakpoint;

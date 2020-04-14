@@ -43,7 +43,7 @@
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Add User Cell" forIndexPath:indexPath];
     
     if (true) {
-        cell.textLabel.text = @"Add a User";
+        cell.textLabel.text = @"Tap here to register.";
         UIImage *addImage = [UIImage imageNamed: @"Add User Active"];
         UIImageView *addImageView = [[UIImageView alloc ] initWithImage: addImage];
         
