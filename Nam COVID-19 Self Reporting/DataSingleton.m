@@ -7,6 +7,7 @@
 //
 
 #import "DataSingleton.h"
+#import "SymptomQuestions.h"
 #import <UIKit/UIKit.h>
 
 @interface DataSingleton ()

@@ -21,6 +21,7 @@
 		4D644304243A7B77002655FD /* Scripts in Resources */ = {isa = PBXBuildFile; fileRef = 4D644303243A7B77002655FD /* Scripts */; };
 		4D64431D243DFADC002655FD /* GeneralUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D64431B243DFADC002655FD /* GeneralUtils.m */; };
 		4D64431E243DFADC002655FD /* BuildEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D64431C243DFADC002655FD /* BuildEnvironment.m */; };
+		4D7A1D102448E7AE0009A3A0 /* SymptomQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7A1D0F2448E7AE0009A3A0 /* SymptomQuestions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		4D64431A243DFADC002655FD /* BuildEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildEnvironment.h; sourceTree = "<group>"; };
 		4D64431B243DFADC002655FD /* GeneralUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralUtils.m; sourceTree = "<group>"; };
 		4D64431C243DFADC002655FD /* BuildEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildEnvironment.m; sourceTree = "<group>"; };
+		4D7A1D0E2448E7AE0009A3A0 /* SymptomQuestions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SymptomQuestions.h; sourceTree = "<group>"; };
+		4D7A1D0F2448E7AE0009A3A0 /* SymptomQuestions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SymptomQuestions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				4D6442FD243A3AA0002655FD /* UserListTableViewController.m */,
 				4D6442F9243A392C002655FD /* DataSingleton.h */,
 				4D6442FA243A392C002655FD /* DataSingleton.m */,
+				4D7A1D0E2448E7AE0009A3A0 /* SymptomQuestions.h */,
+				4D7A1D0F2448E7AE0009A3A0 /* SymptomQuestions.m */,
 				4D6442CA243A0E62002655FD /* Assets.xcassets */,
 				4D6442C7243A0E61002655FD /* Main.storyboard */,
 				4D6442CC243A0E62002655FD /* LaunchScreen.storyboard */,
@@ -348,6 +353,7 @@
 				4D6442C3243A0E61002655FD /* SceneDelegate.m in Sources */,
 				4D64431D243DFADC002655FD /* GeneralUtils.m in Sources */,
 				4D6442FE243A3AA0002655FD /* UserListTableViewController.m in Sources */,
+				4D7A1D102448E7AE0009A3A0 /* SymptomQuestions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
